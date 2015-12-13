@@ -1,0 +1,13 @@
+@import
+    '../helpers/color.variables.common';
+
+// Component
+//
+// Styleguide 3.0
+
+%basicBtn {
+  display: inline-block;
+  background-color: $red;
+  padding: 10px;
+  text-align: center;
+}

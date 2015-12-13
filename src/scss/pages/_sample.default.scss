@@ -1,0 +1,18 @@
+@import
+    '../base/helpers/color.variables.common',
+    '../base/components/btn.default';
+
+// Sample PC
+//
+// Markup:
+// <div class="sample">markup</div>
+//
+// Styleguide 2.0
+
+.sample {
+    color: #00f;
+    background-color: $red;
+    &__btn {
+      @extend %basicBtn;
+    }
+}

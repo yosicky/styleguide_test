@@ -1,0 +1,17 @@
+@import
+    './helpers/color.variables.common',
+    './components/btn.default';
+
+// Components
+//
+// %basicBtn
+//
+// Markup:
+// <a class="sg-basicBtn">ベーシックボタン</a>
+//
+// Styleguide 1.0
+
+
+.sg-basicBtn {
+    @extend %basicBtn;
+}
