@@ -50,7 +50,7 @@ const Configs = {
     root: './styleguide/pc',
     output: './styleguide/pc',
     port: 3001,
-    styles: ['./src/scss/app.default.scss', './src/scss/base/styleguide.default.scss']
+    styles: ['./src/scss/app.default.scss', './src/scss/base/sgSample.default.scss']
   },
   sp: {
     source: ['./src/scss/**/*.common.scss', './src/scss/**/*.sp.scss'],
@@ -72,6 +72,7 @@ let styleguideGenerate = (type, server = true) => {
   let config = configSet(type);
   let flag = server;
   console.log(config);
+  console.log(flag);
   return gulp.src(config.source)
     .pipe(styleguide.generate({
         title: config.title,
@@ -89,7 +90,7 @@ let styleguideApplyStyles = (type) => {
     .pipe($.sass({
       errLogToConsole: true
     }))
-    .pipe($.concat(`${config.output}/styleguide.css`))
+    .pipe($.concat(`styleguide.css`))
     .pipe(styleguide.applyStyles())
     .pipe(gulp.dest(config.output));
 };
